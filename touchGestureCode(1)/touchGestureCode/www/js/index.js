@@ -14,7 +14,7 @@ $(document).on("pagecreate","#pageone",function(){
     	$(this).css('color', 'green');
   	});
         
-    $('#swipetext').on("swipeleft",function(){
+    $('#swipetext').on("swiperight",function(){
         $(this).ss('color', 'blue');
     });
 
