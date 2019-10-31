@@ -13,8 +13,10 @@ $(document).on("pagecreate","#pageone",function(){
 	$('#swipetext').on("swipeleft",function(){
     	$(this).css('color', 'green');
     });
+    
+    $
 
-    var paused_count =0;
+var paused_count =0;
 var resumed_count = 0;
 var launched_count = 0;
 
@@ -60,4 +62,33 @@ function updateDisplay() {
     }
 
 
+});
+// Define a click binding for all anchors in the page
+$( "a" ).on( "click", function( event ) {
+
+	// Prevent the usual navigation behavior
+	event.preventDefault();
+
+	// Alter the url according to the anchor's href attribute, and
+	// store the data-foo attribute information with the url
+	$.mobile.navigate( $(this).attr( "href" ), {
+		foo: $(this).attr("data-foo")
+	});
+
+	// Hypothetical content alteration based on the url. E.g, make
+	// an Ajax request for JSON data and render a template into the page.
+	alterContent( $(this).attr("href") );
+});
+// Respond to back/forward navigation
+$( window ).on( "navigate", function( event, data ){
+	if ( data.state.foo ) {
+		// Make use of the arbitrary data stored
+	}
+
+	if ( data.state.direction == "back" ) {
+		// Make use of the directional information
+	}
+
+	// reset the content based on the url
+	alterContent( data.state.url );
 });
