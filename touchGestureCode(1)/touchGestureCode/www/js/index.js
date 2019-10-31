@@ -7,7 +7,7 @@ $(document).on("pagecreate","#pageone",function(){
  	});                       
 
 	$('#taptext').on("tap",function(){
-    	$(this).css('color','red';
+    	$(this).css('color','red');
  	}); 
 
 	$('#swipetext').on("swipeleft",function(){
