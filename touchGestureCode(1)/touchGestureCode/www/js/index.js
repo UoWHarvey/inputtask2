@@ -92,3 +92,13 @@ $( window ).on( "navigate", function( event, data ){
 	// reset the content based on the url
 	alterContent( data.state.url );
 });
+// Bind to the navigate event
+$( window ).on( "navigate", function() {
+	console.log( "navigated!" );
+});
+
+// Bind to the click of the example link
+$( "#event-example" ).click(function( event ) {
+	event.preventDefault();
+	location.hash = "foo";
+});
