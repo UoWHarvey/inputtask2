@@ -12,10 +12,11 @@ $(document).on("pagecreate","#pageone",function(){
 
 	$('#swipetext').on("swipeleft",function(){
     	$(this).css('color', 'green');
+     ('#swipetext').on("swiperight",function(){
+        $(this).ss('color', 'blue');
   	});
         
-    $('#swipetext').on("swiperight",function(){
-        $(this).ss('color', 'blue');
+    $
     });
 
 
